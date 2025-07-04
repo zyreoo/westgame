@@ -1,0 +1,190 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-bottom: 4rem;
+}
+
+.header {
+  background-color: var(--header-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  color: var(--background-color);
+  font-size: 3.5rem;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gameEditions, .merchandise {
+  margin-bottom: 6rem;
+}
+
+.gameEditions h2, .merchandise h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.editionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.editionCard {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.3s ease;
+}
+
+.editionCard:hover {
+  transform: translateY(-4px);
+}
+
+.whitePlaceholder {
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.editionInfo {
+  padding: 2rem;
+}
+
+.editionInfo h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  color: var(--text-color);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.buyButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buyButton:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.merchGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.merchCard {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.3s ease;
+}
+
+.merchCard:hover {
+  transform: translateY(-4px);
+}
+
+.merchCard .whitePlaceholder {
+  height: 300px;
+}
+
+.merchInfo {
+  padding: 2rem;
+}
+
+.merchInfo h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .editionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .merchGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.8rem;
+  }
+
+  .editionsGrid, .merchGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .gameEditions h2, .merchandise h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 3rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .editionInfo h3 {
+    font-size: 1.5rem;
+  }
+} 

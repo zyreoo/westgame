@@ -1,0 +1,178 @@
+.nav {
+  background-color: var(--header-color);
+  padding: 1.2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.navContent {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--background-color);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  color: var(--secondary-color);
+  transform: scale(1.02);
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menuButton span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--background-color);
+  transition: all 0.4s ease;
+  border-radius: 2px;
+}
+
+.menuButton.menuOpen span:first-child {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menuButton.menuOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton.menuOpen span:last-child {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.links a:hover {
+  color: var(--background-color);
+  border-bottom: 2px solid var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.ctaButton {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  display: inline-block;
+  border: 2px solid var(--secondary-color);
+  letter-spacing: 0.5px;
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+@media (min-width: 769px) {
+  .navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobileMenu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--header-color);
+    padding: 1.5rem;
+    border-bottom: 3px solid var(--accent-color);
+  }
+
+  .mobileMenu.menuOpen {
+    display: block;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .links a {
+    display: block;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border-bottom: none;
+  }
+
+  .links a:hover {
+    background-color: var(--primary-color);
+    border-bottom: none;
+    color: var(--background-color);
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ctaButton {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+} 

@@ -1,0 +1,259 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-bottom: 4rem;
+}
+
+.header {
+  background-color: var(--header-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  color: var(--background-color);
+  font-size: 3.5rem;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.contactInfo h2, .contactForm h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo > p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.infoCards {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.infoCard {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+}
+
+.infoCard h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.infoCard p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.infoCard a {
+  color: var(--accent-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoCard a:hover {
+  color: var(--primary-color);
+}
+
+.socialLinks h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.socialButton {
+  background-color: var(--card-background);
+  color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--soft-shadow);
+}
+
+.socialButton:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  transform: translateY(-2px);
+}
+
+.form {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--soft-shadow);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(146, 109, 84, 0.1);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.faq {
+  margin-top: 4rem;
+}
+
+.faq h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.faqCard {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.3s ease;
+}
+
+.faqCard:hover {
+  transform: translateY(-4px);
+}
+
+.faqCard h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.faqCard p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.8rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .contactInfo h2, .contactForm h2, .faq h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 3rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+} 
